@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 const links = [
   { href: "#about", label: "About" },
   { href: "#gallery", label: "Gallery" },
+  { href: "#book", label: "Book" },
   { href: "#hours", label: "Hours" },
   { href: "#find", label: "Find Us" },
   { href: "#contact", label: "Contact" },
@@ -46,7 +47,7 @@ export function Navbar() {
           ))}
         </nav>
         <a
-          href="tel:+918250086507"
+          href="#book"
           className="hidden md:inline-block text-xs uppercase tracking-widest text-gold border border-gold/40 px-4 py-2 rounded-full hover:bg-gold hover:text-primary-foreground transition-colors"
         >
           Reserve
