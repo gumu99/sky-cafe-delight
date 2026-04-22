@@ -56,15 +56,23 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.9 }}
           className="flex flex-col items-center gap-4"
         >
-          <button
-            onClick={() => {
-              setShowSoon(true);
-              setTimeout(() => setShowSoon(false), 2800);
-            }}
-            className="group relative overflow-hidden bg-gradient-gold text-primary-foreground px-10 py-4 rounded-full text-sm uppercase tracking-[0.25em] font-medium shadow-glow hover:shadow-warm transition-all duration-500 hover:scale-105"
-          >
-            <span className="relative z-10">View Menu</span>
-          </button>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="#book"
+              className="group relative overflow-hidden bg-gradient-gold text-primary-foreground px-10 py-4 rounded-full text-sm uppercase tracking-[0.25em] font-medium shadow-glow hover:shadow-warm transition-all duration-500 hover:scale-105"
+            >
+              <span className="relative z-10">Reserve a Table</span>
+            </a>
+            <button
+              onClick={() => {
+                setShowSoon(true);
+                setTimeout(() => setShowSoon(false), 2800);
+              }}
+              className="px-10 py-4 rounded-full text-sm uppercase tracking-[0.25em] font-medium border border-gold/40 text-gold hover:bg-gold hover:text-primary-foreground transition-all duration-500"
+            >
+              View Menu
+            </button>
+          </div>
           {showSoon && (
             <motion.div
               initial={{ opacity: 0, y: -8 }}
